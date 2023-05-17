@@ -1,0 +1,20 @@
+agent:
+  config:
+    processors:
+      # Drop the k8s.container.memory_request metric
+      filter/droploadgen:
+        metrics:
+          exclude:
+            match_type: strict
+            metric_names: 
+              -  k8s.container.memory_request
+    service:
+      pipelines:
+        metrics:
+          processors:
+          - memory_limiter
+          - k8s_tagger
+          - batch
+          - resource
+          - resourcedetection
+          - filter/droploadgen
