@@ -1,0 +1,74 @@
+baseURL: https://iortiz-splunk.github.io/splk-otel-collector-processors/
+canonifyURLs: true
+relativeURLs: true
+contentDir: content/en
+title: Splunk Observability Cloud Workshops
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: true
+enableMissingTranslationPlaceholders: false
+enableRobotsTXT: true
+module:
+  imports:
+    - path: github.com/McShelby/hugo-theme-relearn
+theme:
+  - github.com/McShelby/hugo-theme-relearn
+languages:
+  en:
+    title: "Splunk Observability Cloud Workshops"
+    description: Splunk Observability Workshops
+    languageName: English
+    contentDir: content/en
+    weight: 1
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    guessSyntax: false
+    noClasses: false
+outputs:
+  home:
+    - HTML
+    - RSS
+    - PRINT
+    - SEARCH
+    - SEARCHPAGE
+  section:
+    - HTML
+    - RSS
+    - PRINT
+  page:
+    - HTML
+    - RSS
+    - PRINT
+params:
+  alwaysopen: false
+  description: "Splunk Observability Workshops"
+  showVisitedLinks: true
+  collapsibleMenu: true
+  disableSearch: false
+  disableBreadcrumb: false
+  disableInlineCopyToClipBoard: true
+  disableNextPrev: false
+  disableLandingPageButton: false
+  titleSeparator: "::"
+  themeVariant: ["splunk-light", "splunk-dark", "aws"]
+  additionalContentLanguage: ["ja"]
+  versions:
+    - version: latest
+      url: https://iortiz-splunk.github.io/splk-otel-collector-processors/latest/
+  url_latest_version: https://iortiz-splunk.github.io/splk-otel-collector-processors/
+menu:
+  shortcuts:
+    - name: "<i class='fab fa-fw fa-github'></i> GitHub Repository"
+      url: "https://github.com/iortiz-splunk/splk-otel-collector-processors"
+      weight: 10
+    - name: <i class="fab fa-fw fa-wpexplorer"></i> OpenTelemetry
+      url: "https://opentelemetry.io"
+      weight: 20
+    - name: <i class="fab fa-fw fa-twitter"></i> Twitter
+      url: "https://twitter.com/splunk"
+      weight: 30
+    - name: <i class="fas fa-tags"></i> Tags
+      url: "/tags"
+      weight: 40
